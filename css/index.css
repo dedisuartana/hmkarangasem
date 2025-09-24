@@ -14,7 +14,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 51, 102, 0.6);
+            background-color: rgba(24, 25, 25, 0.479);
             z-index: 1;
         }
         .hero-content {
@@ -353,4 +353,5 @@ body {
   .team-info p {
     font-size: 0.85rem; /* Menyesuaikan ukuran font spesialisasi di mobile */
   }
+
 }
