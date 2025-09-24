@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klinik Utama Jantung Hasna Medika</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+     <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="300x300" href="android-chrome-512x512.ico">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- AOS (Animate On Scroll) Library CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="300x300" href="android-chrome-512x512.ico">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navigation Bar -->
+       <!-- Header / Navigation Bar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center text-2xl font-bold text-blue-800">
+                <!-- Ganti 'img/logo-rs.png' dengan path logo Anda -->
+                <img src="img/logo.png" alt="Logo RS Sehat Selalu" class="h-10 w-auto mr-3" onerror="this.onerror=null;this.src='https://placehold.co/150x50/003366/FFFFFF?text=Logo+RS';">
+                
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#beranda" class="text-gray-600 hover:text-blue-600">Home</a>
+                <a href="#layanan" class="text-gray-600 hover:text-blue-600">Services</a>
+                <a href="#tentang" class="text-gray-600 hover:text-blue-600">About Us</a>
+                <a href="#team" class="text-gray-600 hover:text-blue-600">Medical Team</a>
+                <a href="#kontak" class="text-gray-600 hover:text-blue-600">Contact</a>
+
+                <div class="language-selector">
+                     <button class="lang-btn">
+                        <span class="flag-icon">🇬🇧</span>
+                        <span>ENG</span>
+                        <span class="arrow-down">▼</span>
+                    </button>
+
+                <div class="lang-dropdown">
+                    <a href="index-id.html" class="lang-option" data-lang="id">
+                        <span class="flag-icon">🇮🇩</span>
+                        <span>Indonesia</span>
+                    </a>
+                    <a href="#" class="lang-option" data-lang="en">
+                        <span class="flag-icon">🇬🇧</span>
+                        <span>English</span>
+                    </a>
+                </div>
+            </div>
+            </div>
+            <a href="appoinment.html" class="hidden md:block bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition duration-300">Appointment</a>
+            <button class="md:hidden" id="mobile-menu-button">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu (disembunyikan secara default) -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <a href="#beranda" class="block py-2 px-4 text-sm hover:bg-gray-100">Home</a>
+            <a href="#layanan" class="block py-2 px-4 text-sm hover:bg-gray-100">Services</a>
+            <a href="#tentang" class="block py-2 px-4 text-sm hover:bg-gray-100">About Us</a>
+            <a href="#dokter" class="block py-2 px-4 text-sm hover:bg-gray-100">Medical Team</a>
+            <a href="#kontak" class="block py-2 px-4 text-sm hover:bg-gray-100">Contact</a>
+
+            <div class="language-selector relative p-4">
+            <button class="lang-btn" id="lang-btn">
+                <span class="flag-icon">🇬🇧</span>
+                <span>ENG</span>
+                <span class="arrow-down">▼</span>
+            </button>
+
+            <div class="lang-dropdown hidden absolute bg-white shadow-md rounded mt-2 w-40 z-10" id="lang-dropdown">
+                <a href="index-id.html" class="lang-option" data-lang="id">
+                    <span class="flag-icon">🇮🇩</span>
+                    <span>Indonesia</span>
+                </a>
+                <a href="#" class="lang-option" data-lang="en">
+                    <span class="flag-icon">🇬🇧</span>
+                    <span>English</span>
+                </a>
+            </div>
+        </div>
+            <div class="p-4">
+                <a href="#" class="block text-center bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition duration-300">Appointment</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="beranda" class="hero-section relative h-[60vh] md:h-[80vh] bg-cover bg-center text-white flex items-center justify-center" style="background-image: url('img/potogedung.jpg');">>
+            <div class="hero-content text-center max-w-3xl mx-auto px-4" data-aos="fade-up">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Trusted Health Services for You </h1>
+                <p class="text-lg md:text-xl mb-8">Prioritizing patient safety and recovery with the latest medical technology and a dedicated team of professionals.</p>
+                <a href="/layanan/layanan.html" class="bg-white text-blue-700 font-bold px-8 py-3 rounded-full hover:bg-gray-200 transition duration-300">View Our Services</a>
+            </div>
+        </section>
+
+        <!-- Layanan Unggulan Section -->
+        <section id="layanan" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-800">Our Featured Services</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">We provide a wide range of specialist medical services to meet your healthcare needs.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card Layanan 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                        <img src="img/igd.JPG" alt="Unit Gawat Darurat" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-4 -mt-14 relative border-4 border-white">
+                                <i data-lucide="heart-pulse" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3">24-Hour Emergency Unit & Ambulance</h3>
+                            <p class="text-gray-600">Our medical team is available 24/7 to handle medical emergencies quickly and appropriately.</p>
+                        </div>
+                    </div>
+                    <!-- Card Layanan 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                        <img src="img/konsultasi.JPG" alt="Poli Jantung" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-4 -mt-14 relative border-4 border-white">
+                                <i data-lucide="stethoscope" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3">Heart Clinic & Internal Medicine Clinic</h3>
+                            <p class="text-gray-600">Comprehensive examination and treatment for your heart health by experienced specialist doctors.</p>
+                        </div>
+                    </div>
+                    <!-- Card Layanan 3 -->
+                     <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+                        <img src="img/ranap.jpg" alt="Ruang Rawat Inap" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mb-4 -mt-14 relative border-4 border-white">
+                                <i data-lucide="bed-double" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3">Inpatient Room</h3>
+                            <p class="text-gray-600">Comfortable and modern inpatient facilities to support your recovery process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tentang Kami Section -->
+        <section id="tentang" class="py-20 overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2" data-aos="fade-right">
+                        <img src="img/about.jpg" alt="Tim Medis RS Sehat Selalu" class="rounded-xl shadow-2xl w-full">
+                    </div>
+                    <div class="md:w-1/2" data-aos="fade-left">
+                        <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-6">Why Choose Us?</h2>
+                        <p class="text-gray-600 mb-4"> We are the first main clinic in Bali, part of PT Hasna Medika Group. As the 11th branch of 12 operating clinics, we are committed to delivering exceptional care and prioritizing patient satisfaction.</p>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i> <span><strong>Modern Facilities:</strong> Our medical equipment is always updated according to standards.</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i> <span><strong>Tim Ahli:</strong> Our doctors and nurses are professionals in their fields.</span></li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0"></i> <span><strong>Pelayanan Prima:</strong> We serve with empathy, friendliness, and responsiveness.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Our Team Section -->
+ <section class="team" id="team">
+  <div class="container">
+    <h2 class="section-title">Our Medical Team</h2>
+    <p class="section-subtitle">Meet our dedicated and experienced professionals</p>
+
+    <!-- Specialist Doctors -->
+    <div class="team-category">
+      <h3>Specialist Doctors</h3>
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-img-wrapper">
+            <img src="img/dr.ray.jpg" alt="Dr. Ray" />
+            <div class="team-info">
+              <h4>dr I Putu Raynantha Surya, Sp.Jp</h4>
+              <p>Cardiologist Specialist</p>
+            </div>
+          </div>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-img-wrapper">
+            <img src="img/dr.gede.jpg" alt="Dr. Gede" />
+            <div class="team-info">
+              <h4>dr Gede Aditya Sp.JP , FIHA</h4>
+              <p>Cardiologist Specialist</p>
+            </div>
+          </div>
+        </div>
+         <div class="team-card reveal">
+          <div class="team-img-wrapper">
+            <img src="img/dr.wisnu.jpg" alt="Dr. Wisnu" />
+            <div class="team-info">
+              <h4>dr I Made Wisnu Wardhana Sp.PD</h4>
+              <p>Internist Medicine</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- General Practitioners -->
+    <div class="team-category">
+      <h3>General Practitioners</h3>
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-img-wrapper">
+            <img src="img/dr.budi.jpg" alt="Dr. Budi" />
+            <div class="team-info">
+              <h4>dr. Nyoman Budi Satwika</h4>
+              <p>General Practitioner</p>
+            </div>
+          </div>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-img-wrapper">
+            <img src="img/dr.nadia.jpg" alt="dr. Nadia" />
+            <div class="team-info">
+              <h4>dr. nadia</h4>
+              <p>General Practitioner</p>
+            </div>
+          </div>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-img-wrapper">
+            <img src="img/dr.rangga.jpg" alt="dr. Rangga" />
+            <div class="team-info">
+              <h4>dr I Putu Rangga Rasnadea Tama</h4>
+              <p>General Practitioner</p>
+            </div>
+          </div>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-img-wrapper">
+            <img src="img/dr.yoga.jpg" alt="dr. Yoga" />
+            <div class="team-info">
+              <h4>dr. Yoga</h4>
+              <p>General Practitioner</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Nurses -->
+    <div class="team-category">
+      <h3>Nurses</h3>
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-img-wrapper">
+            <img src="img/desi.jpg" alt="Nurse Dewi" />
+            <div class="team-info">
+              <h4>Ners. Ni Putu Desinta Mita Sari, S.Kep.</h4>
+              <p>Head Nurse</p>
+            </div>
+          </div>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-img-wrapper">
+            <img src="img/dewi.jpg" alt="Nurse Desi" />
+            <div class="team-info">
+              <h4>Ners. Ni Putu Komaliana Dewi, S.Kep.</h4>
+              <p>Nurse</p>
+            </div>
+          </div>
+        </div>
+         <div class="team-card reveal">
+          <div class="team-img-wrapper">
+            <img src="img/.jpg" alt="Nurse Maha" />
+            <div class="team-info">
+              <h4>Ners. I Made Mahayadnya, S.Kep.</h4>
+              <p>Nurse</p>
+            </div>
+          </div>
+        </div>
+         <div class="team-card reveal">
+          <div class="team-img-wrapper">
+            <img src="img/gilang.jpg" alt="Nurse Gilang" />
+            <div class="team-info">
+              <h4>Ners.Gede Dalem Gilang Mahajaya Putra, S.Tr. Kep.</h4>
+              <p>Nurse</p>
+            </div>
+          </div>
+        </div>
+         <div class="team-card reveal">
+          <div class="team-img-wrapper">
+            <img src="img/endry.jpg" alt="Nurse Endri" />
+            <div class="team-info">
+              <h4>Ners.Ni Made Endri Primayanti, SKep.</h4>
+              <p>Nurse</p>
+            </div>
+          </div>
+        </div>
+         <div class="team-card reveal">
+          <div class="team-img-wrapper">
+            <img src="img/sefti.jpg" alt="Nurse Sefti" />
+            <div class="team-info">
+              <h4>Ners. Ni Made Seftia Antari, S.Kep.</h4>
+              <p>Nurse</p>
+            </div>
+          </div>
+        </div>
+         <div class="team-card reveal">
+          <div class="team-img-wrapper">
+            <img src="img/-.jpg" alt="Nurse Dwi" />
+            <div class="team-info">
+              <h4>Ners. Ni Putu Komaliana Dewi, S.Kep.</h4>
+              <p>Nurse</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-gray-800 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                     <img src="img/logo.png" alt="Logo Klinik Utama Hasna Medika Karangasem" class="h-12 mb-4">
+                    <h4 class="text-xl font-bold mb-4">Hasna Medika Clinic, Karangasem</h4>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#layanan" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#dokter" class="text-gray-400 hover:text-white">Medical Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Karir</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">News & Articles</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact us</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start"><i data-lucide="map-pin" class="w-5 h-5 mr-3 mt-1 flex-shrink-0"></i>Jl. Achmad Yani, Subagan, Karangasem</li>
+                        <li class="flex items-center"><i data-lucide="phone" class="w-5 h-5 mr-3"></i>(0363) 4330003</li>
+                        <li class="flex items-center"><i data-lucide="mail" class="w-5 h-5 mr-3"></i>hasnamedikabali@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="bg-red-600 p-6 rounded-lg text-center">
+                     <h4 class="text-lg font-semibold mb-2">Emergency Call</h4>
+                     <p class="text-3xl font-bold tracking-wider">(0363) 4330011</p>
+                     <p class="text-sm mt-2">Open 24 Hours</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 Hasna Medika Karangasem</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Contact Float -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-center">
+        <!-- Expanded Links (Hidden by default) -->
+        <div id="expanded-links" class="flex flex-col items-center mb-4 space-y-4 invisible opacity-0 transform translate-y-4 transition-all duration-300">
+            <!-- Link WhatsApp -->
+            <a href="https://wa.me/6282311163611?" target="_blank" rel="noopener noreferrer" title="Contact via WhatsApp" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transform hover:-translate-y-1 transition-all">
+                <i data-lucide="message-circle" class="w-7 h-7"></i>
+            </a>
+            <!-- Link Lokasi -->
+            <a href="https://maps.app.goo.gl/zGDdA2pd4nL2jKky5" target="_blank" rel="noopener noreferrer" title="View Location on Map" class="bg-blue-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-blue-600 transform hover:-translate-y-1 transition-all">
+                <i data-lucide="map-pin" class="w-7 h-7"></i>
+            </a>
+        </div>
+        <!-- Main Toggle Button -->
+        <button id="contact-toggle-button" title="Hubungi Kami" class="bg-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-blue-700 focus:outline-none z-10">
+            <i id="contact-icon-open" data-lucide="phone-outgoing" class="w-8 h-8 transition-transform duration-300"></i>
+            <i id="contact-icon-close" data-lucide="x" class="w-8 h-8 hidden transition-transform duration-300"></i>
+        </button>
+    </div>
+
+    <!-- AOS (Animate On Scroll) Library JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>

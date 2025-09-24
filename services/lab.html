@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Laboratorium</title>
+    <link rel="stylesheet" href="/services/css/lab.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Dashboard Laboratorium Modern</h1>
+    </header>
+
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="https://images.unsplash.com/photo-1579154288023-64909641733a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzOTAwMjV8MHwxfHNlYXJjaHw0fHxzY2llbmNlJTIwbGFib3JhdG9yeXxlbnwwfHx8fDE3MjU4Njk0NTV8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Lab 1">
+            <div class="slide-text">Alat Baru: Spektrofotometer UV-Vis Terbaru</div>
+        </div>
+        <div class="slide fade">
+            <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzOTAwMjV8MHwxfHNlYXJjaHwyfHxzY2llbmNlJTIwbGFib3JhdG9yeXxlbnwwfHx8fDE3MjU4Njk0NTV8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Lab 2">
+            <div class="slide-text">Jadwal Maintenance Bulanan: 15 September 2025</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <main class="main-content">
+        <h2>Status Alat Real-time</h2>
+        <div id="instrument-grid" class="instrument-grid">
+            </div>
+    </main>
+
+    <div id="detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <script src="/services/js/lab.js"></script>
+</body>
+</html>

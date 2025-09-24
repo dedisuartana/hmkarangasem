@@ -1,0 +1,356 @@
+ /* Efek scroll yang halus saat klik navigasi */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Menggunakan font Inter sebagai default */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tambahan untuk hero section agar gambar tidak terlalu terang */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 51, 102, 0.6);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+
+/* --- Language Selector Styling --- */
+
+/* Wadah utama */
+.language-selector {
+  position: relative; /* Penting untuk posisi dropdown */
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Tombol utama di navbar */
+.lang-btn {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 20px;
+  padding: 8px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.lang-btn:hover {
+  background-color: #e9ecef;
+}
+
+.lang-btn .flag-icon {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.lang-btn .arrow-down {
+  font-size: 10px;
+  margin-left: 10px;
+  color: #6c757d;
+}
+
+/* Menu dropdown */
+.lang-dropdown {
+  display: none; /* Sembunyi secara default */
+  position: absolute;
+  top: 110%; /* Posisi sedikit di bawah tombol */
+  right: 0;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+/* Kelas 'show' untuk menampilkan dropdown (ditambahkan oleh JS) */
+.lang-dropdown.show {
+  display: block;
+}
+
+/* Setiap item/pilihan bahasa di dropdown */
+.lang-option {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.lang-option:hover {
+  background-color: #f1f1f1;
+}
+
+.lang-option .flag-icon {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+  /* --- Import Font (Opsional, tapi direkomendasikan) --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* --- Variabel Global untuk Kemudahan Kustomisasi --- */
+:root {
+  --primary-color: #007bff; /* Biru */
+  --secondary-color: #495057; /* Abu-abu tua */
+  --background-color: #f8f9fa; /* Abu-abu muda */
+  --card-background: #ffffff; /* Putih */
+  --text-color: #343a40;
+  --text-light: #ffffff;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+}
+
+/* --- Gaya Dasar --- */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+ .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 8px; /* Jarak antara bendera dan teks */
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+        .lang-option:hover {
+            background-color: #f3f4f6; /* Warna abu-abu saat hover */
+        }
+        .lang-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+/* --- Gaya Section Tim Dokter --- */
+.team {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* Garis bawah dekoratif untuk judul */
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- Kategori Tim --- */
+.team-category {
+  margin-bottom: 40px;
+}
+
+.team-category h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+/* --- Grid untuk Kartu Tim --- */
+.team-grid {
+  display: grid;
+  /* Mobile: 1 kolom */
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* --- Desain Kartu Anggota Tim --- */
+.team-card {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden; /* Penting agar gambar tidak keluar dari border-radius */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Penyesuaian untuk Gambar dan Card Dokter Spesialis agar Lebih Dinamis --- */
+
+/* --- REVISI FINAL: Gambar Utuh & Card Dinamis --- */
+
+.team-card {
+    background-color: #ffffff;
+    border-radius: 12px; /* Sudut dibuat sedikit lebih modern */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Bayangan lebih halus */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* styling tim dokter dll */
+.team-img-wrapper img {
+    width: 75%;
+    height: auto; /* Membiarkan tinggi gambar menyesuaikan secara otomatis */
+    /* Properti 'object-fit' dan 'object-position' kita hapus */
+    display: block; /* Menghilangkan spasi kosong di bawah gambar */
+    border-radius: 12px 12px 0 0; /* Menyesuaikan sudut card */
+    /* 2. Beri jarak dari atas dan posisikan di tengah */
+    margin: 1.5rem auto 0; /* 1.5rem jarak atas, auto untuk tengah, 0 untuk bawah */
+
+    /* 3. Bulatkan semua sudutnya agar terlihat lebih rapi */
+    border-radius: 8px; 
+}
+
+/* Penyesuaian kecil pada info teks */
+.team-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.team-info h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+}
+
+.team-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* --- Penyesuaian di Layar Kecil --- */
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .team-info {
+    padding: 0.75rem;
+  }
+
+  .team-info h4 {
+    font-size: 0.9rem;
+  }
+
+  .team-info p {
+    font-size: 0.8rem;
+  }
+}
+/* Info Overlay */
+.team-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+  color: var(--text-light);
+  transform: translateY(30%); /* Sembunyikan sebagian di awal */
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.team-card:hover .team-info {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* --- Animasi Reveal saat Scroll (Membutuhkan JavaScript) --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Tambahkan kelas 'active' dengan JS saat elemen terlihat di layar */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* --- Media Queries untuk Responsivitas --- */
+
+/* Tablet (lebar layar 600px atau lebih) */
+@media (min-width: 600px) {
+  .team-grid {
+    /* 2 kolom */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop (lebar layar 992px atau lebih) */
+@media (min-width: 992px) {
+  .team-grid {
+    /* Layout fleksibel: bisa 3 atau 4 kolom tergantung lebar */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .section-title {
+    font-size: 2.8rem;
+  }
+}
+
+/* Media Query untuk Mobile agar gambar tetap proporsional */
+@media (max-width: 768px) {
+  .team-img-wrapper img {
+    height: 200px; /* Sedikit mengurangi tinggi gambar di mobile */
+  }
+
+  .team-info h4 {
+    font-size: 1rem; /* Menyesuaikan ukuran font nama dokter di mobile */
+  }
+
+  .team-info p {
+    font-size: 0.85rem; /* Menyesuaikan ukuran font spesialisasi di mobile */
+  }
+}
